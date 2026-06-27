@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PeriApp - Finanças - Apps no Google Play</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://www.gstatic.com/android/market_images/web/play_prism_h_64.png" alt="Google Play">
+            <span>Google Play</span>
+        </div>
+        <nav>
+            <a href="#">Jogos</a>
+            <a href="#" class="active">Apps</a>
+            <a href="#">Filmes</a>
+            <a href="#">Livros</a>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <div class="app-info-left">
+            <div class="app-header">
+                <img src="assets/img/periapp_icon.webp" alt="PeriApp Icon" class="app-icon">
+                <div class="app-details">
+                    <h1>PeriApp - Finanças</h1>
+                    <a href="#" class="developer">PeriApp Desenvolvimento</a>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <div class="stat-value">4,8 ★</div>
+                            <div class="stat-label">8,5 mil avaliações</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">250 mil+</div>
+                            <div class="stat-label">Downloads</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">Livre</div>
+                            <div class="stat-label">Classificação</div>
+                        </div>
+                    </div>
+                    <div class="actions">
+                        <button id="downloadBtn" class="btn-install">Baixar APK</button>
+                        <button class="btn-secondary">Compartilhar</button>
+                        <button class="btn-secondary">Adicionar à lista</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="screenshots">
+                <img src="https://via.placeholder.com/300x600/0066cc/ffffff?text=PeriApp+Screenshot+1" alt="Screenshot 1">
+                <img src="https://via.placeholder.com/300x600/0066cc/ffffff?text=PeriApp+Screenshot+2" alt="Screenshot 2">
+                <img src="https://via.placeholder.com/300x600/0066cc/ffffff?text=PeriApp+Screenshot+3" alt="Screenshot 3">
+            </div>
+
+            <div class="about-section">
+                <h2>Sobre este app</h2>
+                <div class="description">
+                    <p><strong>PeriApp - Finanças</strong> é um aplicativo completo de gestão financeira pessoal que ajuda você a controlar suas despesas, receitas e investimentos de forma simples e intuitiva.</p>
+                    <p>Com uma interface moderna e fácil de usar, o PeriApp permite que você:</p>
+                    <p>✓ Registre suas despesas e receitas em tempo real<br>
+                    ✓ Crie orçamentos personalizados<br>
+                    ✓ Acompanhe seus gastos por categoria<br>
+                    ✓ Visualize gráficos e relatórios detalhados<br>
+                    ✓ Sincronize com suas contas bancárias<br>
+                    ✓ Receba alertas de gastos excessivos</p>
+                    <p>Comece a controlar suas finanças hoje mesmo com o PeriApp!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-info-right">
+            <div class="info-card">
+                <h3>Versão</h3>
+                <p>2.1.5</p>
+            </div>
+            <div class="info-card">
+                <h3>Atualizado em</h3>
+                <p>27 de junho de 2026</p>
+            </div>
+            <div class="info-card">
+                <h3>Tamanho</h3>
+                <p>45 MB</p>
+            </div>
+            <div class="info-card">
+                <h3>Requer Android</h3>
+                <p>8.0 ou superior</p>
+            </div>
+            <div class="info-card">
+                <h3>Categoria</h3>
+                <p>Finanças</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal de Instruções de Instalação -->
+    <div id="installModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>📱 Como Instalar o PeriApp</h2>
+            <p>Seu download começou! Siga os passos abaixo para instalar o aplicativo:</p>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Abra o Gerenciador de Downloads</h3>
+                        <p>Procure pelo arquivo <strong>periapp.apk</strong> na sua pasta de downloads.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Permita Instalações de Fontes Desconhecidas</h3>
+                        <p>Se aparecer um aviso, toque em <strong>"Configurações"</strong> e ative <strong>"Permitir desta fonte"</strong>.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Toque em Instalar</h3>
+                        <p>Clique no botão <strong>"Instalar"</strong> e aguarde a conclusão.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Abra o Aplicativo</h3>
+                        <p>Após a instalação, toque em <strong>"Abrir"</strong> para iniciar o PeriApp.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <button id="closeModal" class="btn-install" style="width: 100%; margin-top: 20px;">Entendi, Fechar</button>
+        </div>
+    </div>
+
+    <script>
+        // Função para iniciar o download
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            // Inicia o download do APK
+            const link = document.createElement('a');
+            link.href = 'downloads/periapp.apk';
+            link.download = 'periapp.apk';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            // Mostra o modal com instruções após 500ms
+            setTimeout(() => {
+                document.getElementById('installModal').style.display = 'block';
+            }, 500);
+        });
+        
+        // Fechar modal ao clicar no X
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('installModal').style.display = 'none';
+        });
+        
+        // Fechar modal ao clicar no botão "Entendi"
+        document.getElementById('closeModal').addEventListener('click', function() {
+            document.getElementById('installModal').style.display = 'none';
+        });
+        
+        // Fechar modal ao clicar fora dele
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('installModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
